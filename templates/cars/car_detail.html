@@ -1,0 +1,32 @@
+{% extends "../base.html" %}
+
+{% block  main %}
+    <div class="car-info">
+        <h2>{{car}}</h2>
+        <p>{{car.description}}</p>
+        <hr>
+    </div>
+    <div class="comments">
+        <h2>Комментарии</h2>
+    {% if user.is_authenticated %}
+        <div class="write-comment">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    {% endif %}
+
+        {% if comments %}
+            {% for comment in comments %}
+                <div class='comment'>
+                    <p class='author'>{{comment.author}}</p>
+                    <p class='content'>{{comment.content}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>Комментарии отсутствуют</h2>
+        {% endif %}
+    </div>
+{% endblock %}

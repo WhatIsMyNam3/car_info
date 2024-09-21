@@ -1,0 +1,26 @@
+.comment {
+    background-color: white;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    display: block;
+    padding: 2%;
+    width: 50%;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.comment .author {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment .content {
+    font-size: 13px;
+}
+
+.comment .write-comment { 
+    display: block;
+}

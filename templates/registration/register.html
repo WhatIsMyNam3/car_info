@@ -1,0 +1,41 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block styles %}
+    <link type="text/css" href="{% static 'css/forms.css' %}" rel="stylesheet">
+{% endblock  %}
+
+{% block  main %}
+<form method="POST">
+    <h2>Регистрация</h2>
+    {% csrf_token %}
+
+    <!-- Ввод имени пользователя -->
+    <label for="id_username">Имя пользователя:</label>
+    {% if form.username.errors %}
+        {% for err in form.username.errors %}
+            <ul class="errorlist">{{ err }}</ul>
+        {% endfor %}
+    {% endif %}
+    {{ form.username }}
+    
+    <!-- Ввод пароля -->
+    <label for="id_password1">Пароль:</label>
+    {% if form.password1.errors %}
+        {% for err in form.password1.errors %}
+            <ul class="errorlist">{{ err }}</ul>
+        {% endfor %}
+    {% endif %}
+    {{ form.password1 }}
+
+    <!-- Повтор пароля -->
+    <label for="id_password2">Повторите пароль:</label>
+    {% if form.password2.errors %}
+        {% for err in form.password2.errors %}
+            <ul class="errorlist">{{ err }}</ul>
+        {% endfor %}
+    {% endif %}
+    {{ form.password2 }}
+
+    <button type="submit">Регистрация</button>
+</form>
+{% endblock %}

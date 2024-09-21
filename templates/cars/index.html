@@ -1,0 +1,20 @@
+{% extends "../base.html" %}
+
+{% block  main %}
+    <div class="cars-list">
+        <h2>Список машин</h2>
+        <hr>
+         {% for car in cars%}
+        <a href="{% url 'car-detail' car.pk %}">
+            <div class="car">
+            <div class="details-car">
+                <h2>{{car}}</h2>
+                <div class="owner">
+                    <span>{{car.owner}}</span>
+                </div>
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}

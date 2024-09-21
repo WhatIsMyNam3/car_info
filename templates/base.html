@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CarInfo</title>
+    <link type="text/css" href="{% static 'css/header.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'css/index_cars.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'css/detail_car.css' %}" rel="stylesheet">
+    {% block  styles %}
+    {% endblock %}
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/car_logo.png' %}">
+  </head>
+  <body>
+    {% include 'includes/header.html' %}
+    <main>
+        {% block  main %}
+        {% endblock %}
+    </main>
+  </body>
+</html>

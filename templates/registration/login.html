@@ -1,0 +1,13 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block styles %}
+    <link type="text/css" href="{% static 'css/forms.css' %}" rel="stylesheet">
+{% endblock  %}
+{% block  main %}
+    <form method="post">
+        <h2>Вход</h2>
+        {% csrf_token %}
+        {{ form }}
+    <button type="submit">Вход</button>
+    </form>
+{% endblock %}

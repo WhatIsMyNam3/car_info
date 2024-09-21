@@ -1,0 +1,57 @@
+main {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+}
+
+main form {
+    margin-top: 5%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+main form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main form button:hover {
+    background-color: #ffffff;
+}
+
+main input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.errorlist {
+    color: red;
+    margin-top: 3%;
+    font-size: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.helptext {
+    color: red;
+    margin-top: 3%;
+    font-size: 12px;
+    padding: 0;
+    list-style: none;
+}

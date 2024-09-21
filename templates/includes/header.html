@@ -1,0 +1,28 @@
+{% load static %}
+<header>
+   <div class="logo">
+        <a href="{% url "car-list" %}"><img src="{% static 'images/car_logo.png' %}" alt="Логотип"></a>
+    </div>
+    {% comment %} <div class="search-bar">
+        <input type="text" placeholder="Поиск...">
+        <button class="search-btn">Поиск</button>
+    </div> {% endcomment %}
+    <div class="auth">
+        {% if user.is_authenticated %}
+            <a class='profile' href="{% url "profile" %}">{{user}}</a>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button class="logout" type="submit">Выход</button>
+            </form>
+        {% else %}
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <button class="login" type="submit">Вход</button>
+            </form>
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <button class="register" type="submit">Регистрация</button>
+            </form>
+        {% endif %}
+    </div>
+</header>
