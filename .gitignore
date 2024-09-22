@@ -110,7 +110,6 @@ ENV/
 env.bak/
 venv.bak/
 
-services/
 
 # Spyder project settings
 .spyderproject
@@ -132,5 +131,3 @@ dmypy.json
 
 # .idea
 .idea
-
-images/
