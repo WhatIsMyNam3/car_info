@@ -1,0 +1,24 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block styles %}
+    <link type="text/css" href="{% static 'css/forms.css' %}" rel="stylesheet">
+{% endblock  %}
+{% block  main %}
+    <form method="post">
+        {% if car %}
+            <h2>Изменить сведения</h2>
+        {% else %}    
+            <h2>Новый автомобиль</h2>
+        {% endif %}
+
+        {% csrf_token %}
+        {{ form }}
+
+        {% if car %}
+            <button type="submit">Изменить</button>
+        {% else %}    
+            <button type="submit">Добавить</button>
+        {% endif %}
+       
+    </form>
+{% endblock %}

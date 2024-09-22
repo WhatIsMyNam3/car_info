@@ -8,6 +8,13 @@
             <div class="car">
                 <div class="details-car">
                     <h2>{{car}}</h2>
+                    <div class="del-edit">
+                        <form class='car-delete' method="post" action="{% url 'car-delete' car.pk %}">
+                            {% csrf_token %}
+                            <button type="submit">Удалить</button>
+                        </form>
+                        <a class="car-edit" href="{% url 'car-edit' car.pk %}">Изменить</a>
+                    </div>
                 </div>
             </div>
         </a>

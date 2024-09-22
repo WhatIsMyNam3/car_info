@@ -24,3 +24,7 @@
 .comment .write-comment { 
     display: block;
 }
+
+.delete {
+    margin-top: 5%;
+}

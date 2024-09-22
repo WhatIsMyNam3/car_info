@@ -62,6 +62,10 @@ header {
     font-weight: bold;
 }
 
+.car-add,
+.login,
+.register,
+.car-edit,
 button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -71,7 +75,18 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.car-add,
+.login,
+.register,
+.car-edit {
+    font-size: small;
+}
+
+.car-add:hover,
+.login:hover,
+.register:hover,
+button:hover,
+.car-edit:hover {
     background-color: #ffffff;
     color: #007bff;
 }

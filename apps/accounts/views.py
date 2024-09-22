@@ -23,4 +23,4 @@ def register(request):
 def profile(request):
     """Профиль пользователя."""
     cars = get_list_or_404(Car, owner=request.user)
-    return render(request, 'registration/profile.html',{'cars' : cars})
+    return render(request, 'registration/profile.html', {'cars': cars})
